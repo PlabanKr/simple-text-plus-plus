@@ -1,0 +1,14 @@
+{
+  "name": "simple-notes",
+  "version": "1.0.0",
+  "description": "A simple desktop app for taking notes",
+  "main": "main.js",
+  "scripts": {
+    "devStart": "electron ."
+  },
+  "author": "Plaban Kumar Mondal",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.2"
+  }
+}
