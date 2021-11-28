@@ -25,3 +25,7 @@ app.whenReady().then(() => {
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
 });
+
+ipcMain.on("text_data", (event, data) => {
+  console.log(data);
+});
