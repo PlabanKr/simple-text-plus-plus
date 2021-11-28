@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
+const fs = require("fs");
 
 const createWindow = () => {
   const window = new BrowserWindow({
@@ -27,5 +28,5 @@ app.on("window-all-closed", () => {
 });
 
 ipcMain.on("text_data", (event, data) => {
-  console.log(data);
+  fs.writeFileSync("savedfile.txt", data);
 });
