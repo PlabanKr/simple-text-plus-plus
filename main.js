@@ -8,6 +8,7 @@ const createWindow = () => {
   const window = new BrowserWindow({
     width: 800,
     height: 600,
+    title: "SimpleText++",
     webPreferences: {
       nodeIntegration: false,
       preload: path.join(__dirname, "renderer/preload.js"),
