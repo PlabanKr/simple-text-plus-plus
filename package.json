@@ -1,7 +1,7 @@
 {
-  "name": "simple-notes",
+  "name": "simple-text-plus-plus",
   "version": "1.0.0",
-  "description": "A simple desktop app for taking notes",
+  "description": "A simple desktop app creating txt files",
   "main": "main.js",
   "scripts": {
     "devStart": "electron .",
@@ -12,7 +12,7 @@
   "author": "Plaban Kumar Mondal",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PlabanKr/simple-notes"
+    "url": "https://github.com/PlabanKr/simple-text-plus-plus"
   },
   "license": "MIT",
   "devDependencies": {
