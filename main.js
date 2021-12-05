@@ -1,4 +1,10 @@
-const { app, BrowserWindow, ipcMain, Menu } = require("electron");
+const {
+  app,
+  BrowserWindow,
+  ipcMain,
+  Menu,
+  shell,
+} = require("electron");
 const path = require("path");
 const fs = require("fs");
 
@@ -33,28 +39,30 @@ app.whenReady().then(() => {
         {
           label: "Open File",
         },
+        { type: "separator" },
         {
           label: "Save File",
+          click: () => {},
+          accelerator: "CmdOrCtrl + S",
         },
-        {
-          label: "Close File",
-        },
+        { type: "separator" },
+        { role: "close" },
       ],
     },
     {
       label: "Edit",
       submenu: [
+        { role: "undo" },
+        { role: "redo" },
+        { type: "separator" },
+        { role: "cut" },
+        { role: "copy" },
+        { role: "paste" },
+        { type: "separator" },
+        { role: "selectAll" },
         {
-          label: "Undo",
-        },
-        {
-          label: "Cut",
-        },
-        {
-          label: "Copy",
-        },
-        {
-          label: "Paste",
+          label: "Find",
+          accelerator: "CmdOrCtrl + F",
         },
       ],
     },
@@ -63,9 +71,19 @@ app.whenReady().then(() => {
       submenu: [
         {
           label: "Send Feedback",
+          click: () => {
+            shell.openExternal(
+              "https://github.com/PlabanKr/simple-text-plus-plus/issues"
+            );
+          },
         },
         {
           label: "About SimpleText++",
+          click: () => {
+            shell.openExternal(
+              "https://github.com/PlabanKr/simple-text-plus-plus"
+            );
+          },
         },
       ],
     },
