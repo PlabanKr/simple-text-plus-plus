@@ -35,9 +35,11 @@ app.whenReady().then(() => {
       submenu: [
         {
           label: "New File",
+          accelerator: "CmdOrCtrl + N",
         },
         {
           label: "Open File",
+          accelerator: "CmdOrCtrl + O",
         },
         { type: "separator" },
         {
